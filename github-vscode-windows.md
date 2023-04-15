@@ -101,8 +101,14 @@ ________________________________________
     Este comando crea crea una nueva carpeta con el nombre del repositorio, que a su vez contiene otra carpeta oculta llamada 
 	.git que contiene la base de datos donde se registran los cambios en el repositorio
     No podemos inicializar el repositorio en una carpeta o subcarpeta que ya tenga inicializo git y que ya tenga el .git
-    Ojo podemos inicializar el repo en la maquina local pero para crear el repo en github hay que tirar de API.
-    Para crear el repo en github lo más facil es ir a la web u crear nuevo repo, despues clonarlo en la maquina local modificar y subir      
+    Ojo podemos inicializar el repo en la maquina local pero para crear el repo en github desde la máquina local por consola hay que tirar de API.
+    Configura tu token de autenticación en la consola utilizando el comando git config --global github.token <tu-token>.
+
+Crea un nuevo repositorio en GitHub utilizando la API de GitHub utilizando el siguiente comando:
+`curl -H "Authorization: token <tu-token>" https://api.github.com/user/repos -d '{"name":"nombre-del-repositorio"}'`
+    
+    Para crear el repo en github lo más facil es ir a la web u crear nuevo repo, despues clonarlo en la maquina local modificar y subir.
+
 **Copia de repositorios, descarga.**
 
 `git clone`
