@@ -1,6 +1,6 @@
 # Apuntes git
 
-Cambiar de cuenta github en Windows
+**Cambiar de cuenta github en Windows**
 
 `git config --global user.name "your_username"`	
 
@@ -14,10 +14,13 @@ Cambiar de cuenta github en Windows
 
 Modificar o elimar cuenta en el **Credential Manager**  <-------------
 
-Configuración de Git
-Antes de empezar a usar git es necesario configurarlo con el nombre de usuario y su correo electrónico.
+________________________________________
 
-Muestra de los comandos:
+**Configuración de Git**
+
+Antes de empezar a usar git de 0 es necesario configurarlo con el nombre de usuario y su correo electrónico.
+
+**Muestra de los comandos:**
 
 `git config`
 
@@ -90,15 +93,17 @@ Mostrar la configuración
 
 ________________________________________
 
-Creación de un repositorio nuevo.
+**Creación de un repositorio nuevo.**
 
 `git init`
 
     git init "nombre-repositorio" crea un repositorio nuevo con el nombre "nombre-repositorio".
     Este comando crea crea una nueva carpeta con el nombre del repositorio, que a su vez contiene otra carpeta oculta llamada 
 	.git que contiene la base de datos donde se registran los cambios en el repositorio
-            
-Copia de repositorios, descarga.
+    No podemos inicializar el repositorio en una carpeta o subcarpeta que ya tenga inicializo git y que ya tenga el .git
+    Ojo podemos inicializar el repo en la maquina local pero para crear el repo en github hay que tirar de API.
+    Para crear el repo en github lo más facil es ir a la web u crear nuevo repo, despues clonarlo en la maquina local modificar y subir      
+**Copia de repositorios, descarga.**
 
 `git clone`
 
@@ -106,7 +111,7 @@ Copia de repositorios, descarga.
 	A partir de que se hace la copia, los dos repositorios, el original y la copia, son independientes, es decir, 
 	cualquier cambio en uno de ellos no se verá reflejado en el otro.
         
-Añadir cambios a un repositorio.
+**Añadir cambios a un repositorio.**
 
 **Con Git, cualquier cambio que hagamos en un proyecto tiene que pasar por tres estados hasta que guarde definitivamente en el repositorio.**
 
