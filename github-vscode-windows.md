@@ -18,7 +18,10 @@ Configuración de Git
 Antes de empezar a usar git es necesario configurarlo con el nombre de usuario y su correo electrónico.
 
 Muestra de los comandos:
-`git config
+
+`git config`
+
+```
 usage: git config [<options>]
 
 Config file location
@@ -61,7 +64,10 @@ Other
     --includes            respect include directives on lookup
     --show-origin         show origin of config (file, standard input, blob, command line)
     --show-scope          show scope of config (worktree, local, global, system, command)
-    --default <value>     with --get, use default value when missing entry`
+    --default <value>     with --get, use default value when missing entry
+```
+________________________________________
+
 Establecer el nombre de usuario
 `git config --global user.name "Your-Full-Name"`
 Establecer el correo del usuario
@@ -75,7 +81,7 @@ Mostrar la configuración
 
 ________________________________________
 
-Creación de un repositorio nuevo
+Creación de un repositorio nuevo.
 
 `git init`
 
@@ -83,7 +89,7 @@ Creación de un repositorio nuevo
     Este comando crea crea una nueva carpeta con el nombre del repositorio, que a su vez contiene otra carpeta oculta llamada 
 	.git que contiene la base de datos donde se registran los cambios en el repositorio
             
-Copia de repositorios
+Copia de repositorios, descarga.
 
 `git clone`
 
@@ -91,9 +97,10 @@ Copia de repositorios
 	A partir de que se hace la copia, los dos repositorios, el original y la copia, son independientes, es decir, 
 	cualquier cambio en uno de ellos no se verá reflejado en el otro.
         
-Añadir cambios a un repositorio
+Añadir cambios a un repositorio.
 
-Con Git, cualquier cambio que hagamos en un proyecto tiene que pasar por tres estados hasta que guarde definitivamente en el repositorio.
+**Con Git, cualquier cambio que hagamos en un proyecto tiene que pasar por tres estados hasta que guarde definitivamente en el repositorio.**
+
 ________________________________________
 •	**Directorio de trabajo** (git add) Es el directorio que contiene una copia de una versión concreta del proyecto en la que se está trabajando. Puede contener ficheros que no pertenecen al repositorio.
 ________________________________________
@@ -126,7 +133,8 @@ ________________________________________
 
 Registro de cambios
 
-Para guardar los cambios en un repositorio Git utiliza una estructura de tres niveles:
+Para guardar los cambios en un repositorio Git utiliza la extructura de los tres niveles:
+
 •	Commit Contiene información sobre el autor, el momento y el mensaje de los cambios.
 •	Árbol (tree) Cada commit contiene además un árbol donde se registran los nombres y rutas de los ficheros en el repositorio cuando se hizo el commit.
 •	Blob (binary file object) Para cada uno de los ficheros listados en el árbol hay un blob, que contiene una instantánea comprimida del contenido del fichero cuando se hizo el commit.
