@@ -7,6 +7,7 @@ Cambiar de cuenta github en Windows
 `git config --global user.email "your_email@example.com"`
 
 git config --list
+
 git config --list --show-origin`
 
 **Importante en Windows!**
