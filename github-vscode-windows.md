@@ -6,9 +6,9 @@ Cambiar de cuenta github en Windows
 
 `git config --global user.email "your_email@example.com"`
 
-git config --list
+`git config --list`
 
-git config --list --show-origin`
+`git config --list --show-origin`
 
 **Importante en Windows!**
 
@@ -17,23 +17,67 @@ Modificar o elimar cuenta en el **Credential Manager**  <-------------
 Configuración de Git
 Antes de empezar a usar git es necesario configurarlo con el nombre de usuario y su correo electrónico.
 
-git config
+Muestra de los comandos:
+`git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry`
 Establecer el nombre de usuario
-git config --global user.name "Your-Full-Name"
+`git config --global user.name "Your-Full-Name"`
 Establecer el correo del usuario
-git config --global user.email "your-email-address"
+`git config --global user.email "your-email-address"`
 Activar el coloreado de la salida
-git config --global color.ui auto
+`git config --global color.ui auto`
 Mostrar el estado original en los conflictos
-git config --global merge.conflictstyle diff3
+`git config --global merge.conflictstyle diff3`
 Mostrar la configuración
-git config --list
+`git config --list`
 
 ________________________________________
 
 Creación de un repositorio nuevo
 
-git init
+`git init`
 
     git init "nombre-repositorio" crea un repositorio nuevo con el nombre "nombre-repositorio".
     Este comando crea crea una nueva carpeta con el nombre del repositorio, que a su vez contiene otra carpeta oculta llamada 
@@ -41,7 +85,7 @@ git init
             
 Copia de repositorios
 
-git clone
+`git clone`
 
 	git clone "url-repositorio" crea una copia local del repositorio ubicado en la dirección "url-repositorio".
 	A partir de que se hace la copia, los dos repositorios, el original y la copia, son independientes, es decir, 
@@ -60,10 +104,10 @@ Añadir cambios a la zona de intercambio temporal
 ________________________________________
 
 `git add`
-
 •	git add <fichero> añade los cambios en el fichero <fichero> del directorio de trabajo a la zona de intercambio temporal.
 •	git add <carpeta> añade los cambios en todos los ficheros de la carpeta <carpeta> del directorio de trabajo a la zona de intercambio temporal.
 •	git add . añade todos los cambios de todos los ficheros no guardados aún en la zona de intercambio temporal.
+
 Añadir cambios al repositorio local
 
 `git commit`
