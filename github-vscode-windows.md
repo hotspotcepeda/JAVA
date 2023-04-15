@@ -105,6 +105,7 @@ ________________________________________
     Configura tu token de autenticación en la consola utilizando el comando git config --global github.token <tu-token>.
 
 Crea un nuevo repositorio en GitHub utilizando la API de GitHub utilizando el siguiente comando:
+
 `curl -H "Authorization: token <tu-token>" https://api.github.com/user/repos -d '{"name":"nombre-del-repositorio"}'`
     
     Para crear el repo en github lo más facil es ir a la web u crear nuevo repo, despues clonarlo en la maquina local modificar y subir.
