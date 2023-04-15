@@ -69,14 +69,23 @@ Other
 ________________________________________
 
 Establecer el nombre de usuario
+
 `git config --global user.name "Your-Full-Name"`
+
 Establecer el correo del usuario
+
 `git config --global user.email "your-email-address"`
+
 Activar el coloreado de la salida
+
 `git config --global color.ui auto`
+
 Mostrar el estado original en los conflictos
+
 `git config --global merge.conflictstyle diff3`
+
 Mostrar la configuración
+
 `git config --list`
 
 ________________________________________
