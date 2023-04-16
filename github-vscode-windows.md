@@ -132,16 +132,17 @@ Añadir cambios a la zona de intercambio temporal
 ________________________________________
 
 `git add`
-•	git add <fichero> añade los cambios en el fichero <fichero> del directorio de trabajo a la zona de intercambio temporal.
-•	git add <carpeta> añade los cambios en todos los ficheros de la carpeta <carpeta> del directorio de trabajo a la zona de intercambio temporal.
-•	git add . añade todos los cambios de todos los ficheros no guardados aún en la zona de intercambio temporal.
+
+- `git add <fichero>` añade los cambios en el fichero <fichero> del directorio de trabajo a la zona de intercambio temporal.
+- `git add <carpeta>` añade los cambios en todos los ficheros de la carpeta <carpeta> del directorio de trabajo a la zona de intercambio temporal.
+- `git add .` añade todos los cambios de todos los ficheros no guardados aún en la zona de intercambio temporal.
 
 Añadir cambios al repositorio local
 
 `git commit`
 
-•	git commit -m "mensaje" confirma todos los cambios de la zona de intercambio temporal añadiéndolos al repositorio y creando una nueva versión del proyecto. "mensaje" es un breve mensaje describiendo los cambios realizados que se asociará a la nueva versión del proyecto.
-•	git commit --amend -m "mensaje" cambia el mensaje del último commit por el nuevo mensaje "mensaje".
+- `git commit -m "mensaje"` confirma todos los cambios de la zona de intercambio temporal añadiéndolos al repositorio y creando una nueva versión del proyecto. "mensaje" es un breve mensaje describiendo los cambios realizados que se asociará a la nueva versión del proyecto.
+- `git commit --amend -m "mensaje"` cambia el mensaje del último commit por el nuevo mensaje "mensaje".
 
 `git push`
 
@@ -149,20 +150,20 @@ Añadir cambios al repositorio local
 
 `git status`
 
-**Con git status vamos controlando los cambios que tenemos y el estado ** 
+**Con git status vamos controlando los cambios que tenemos y el estado** 
 ________________________________________
 
-Registro de cambios
+**Registro de cambios**
 
 Para guardar los cambios en un repositorio Git utiliza la extructura de los tres niveles:
 
-•	Commit Contiene información sobre el autor, el momento y el mensaje de los cambios.
-•	Árbol (tree) Cada commit contiene además un árbol donde se registran los nombres y rutas de los ficheros en el repositorio cuando se hizo el commit.
-•	Blob (binary file object) Para cada uno de los ficheros listados en el árbol hay un blob, que contiene una instantánea comprimida del contenido del fichero cuando se hizo el commit.
+- Commit Contiene información sobre el autor, el momento y el mensaje de los cambios.
+- Árbol (tree) Cada commit contiene además un árbol donde se registran los nombres y rutas de los ficheros en el repositorio cuando se hizo el commit.
+- Blob (binary file object) Para cada uno de los ficheros listados en el árbol hay un blob, que contiene una instantánea comprimida del contenido del fichero cuando se hizo el commit.
 Si un fichero del repositorio no ha cambiado en el commit, el árbol apunta al blob del fichero del último commit donde el fichero cambió.
 
-Referenciar un commit
+**Referenciar un commit**
 
 Cada commit tiene asociado un código hash de 40 caracteres hexadecimales que lo identifica de manera única. Hay dos formas de referirse a un commit:
-•	Nombre absoluto: Se utiliza su código hash (basta indicar los 4 o 5 primeros dígitos).
-•	Nombre relativo: Se utiliza la palabra HEAD para referirse siempre al último commit. Para referirse al penúltimo commit se utiliza HEAD~1, al antepenúltimo HEAD~2, etc.
+- Nombre absoluto: Se utiliza su código hash (basta indicar los 4 o 5 primeros dígitos).
+- Nombre relativo: Se utiliza la palabra HEAD para referirse siempre al último commit. Para referirse al penúltimo commit se utiliza HEAD~1, al antepenúltimo HEAD~2, etc.
