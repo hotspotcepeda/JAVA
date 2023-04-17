@@ -97,19 +97,20 @@ ________________________________________
 
 `git init`
 
-    git init "nombre-repositorio" crea un repositorio nuevo con el nombre "nombre-repositorio".
-    Este comando crea crea una nueva carpeta con el nombre del repositorio, que a su vez contiene otra carpeta oculta llamada 
-	.git que contiene la base de datos donde se registran los cambios en el repositorio
-    No podemos inicializar el repositorio en una carpeta o subcarpeta que ya tenga inicializo git y que ya tenga el .git
-    Ojo podemos inicializar el repo en la maquina local pero para crear el repo en github desde la máquina local por consola hay que tirar de API.
-    Configura tu token de autenticación en la consola utilizando el comando git config --global github.token <tu-token>.
+- `git init "nombre-repositorio"` crea un repositorio nuevo con el nombre "nombre-repositorio".
+    Este comando crea crea una nueva carpeta con el nombre del repositorio, que a su vez contiene otra carpeta oculta llamada **.git** que contiene la base de datos donde se registran los cambios en el repositorio.
+    Todas las carpetas que estén dentro de la carpeta donde está el .git forman parte del repo.
+    No podemos inicializar el repositorio en una carpeta o subcarpeta que ya tenga inicializo git y que ya tenga el .git . 
+    De origen se trabaja en **master o main**
 
-Crea un nuevo repositorio en GitHub utilizando la API de GitHub utilizando el siguiente comando:
+    Ojo podemos inicializar el repo en la maquina local pero para crear el repo en github desde la máquina local por consola hay que tirar de API.
+    - Configura tu token de autenticación en la consola utilizando el comando git config --global github.token <tu-token>.
+
+    - Crea un nuevo repositorio en GitHub utilizando la API de GitHub utilizando el siguiente comando:
 
 `curl -H "Authorization: token <tu-token>" https://api.github.com/user/repos -d '{"name":"nombre-del-repositorio"}'`
     
-    Para crear el repo en github lo más facil es ir a la web u crear nuevo repo, despues clonarlo en la maquina local modificar y subir.
-
+    * Para crear el repo en github lo más facil es ir a la web u crear nuevo repo, despues clonarlo en la maquina local modificar y subir.
 **Copia de repositorios, descarga.**
 
 `git clone`
@@ -150,10 +151,35 @@ Añadir cambios al repositorio local
 
 `git status`
 
-**Con git status vamos controlando los cambios que tenemos y el estado** 
+- **Con git status vamos controlando los cambios que tenemos y el estado** 
+
+`git log`
+
+`git log --graph`
+
+`git log --graph --pretty=oneline`
+
+`git log --graph --decorate --all --oneline`
+
+- Vemos los hash de los commit, ramas, autor, fechas...
+
+`git branch`
+- Cambiamos de de nombre a la rama master con : `git branch -m main` 
+
+`git checkout` y `git reset`
+- Nos situamos en un punto concreto de los 
+
+`.gitignore`
+- Podemos crar el fichero `.gitignore` junto al .git para ir agregando archivos o carpetas que no queremos subir al repo. ponemos una nueva linea con  `**/nombre_fichero` dentro de `.gitignore` y lo ignorará.
+
+`git diff`
+- nos muestra los cambios que hemos hecho
+  
 ________________________________________
 
 **Registro de cambios**
+
+
 
 Para guardar los cambios en un repositorio Git utiliza la extructura de los tres niveles:
 
