@@ -45,16 +45,134 @@ public class Ejercicio_01 {
 ```
 
 2. Solicita al usuario una frase y una letra y muestra la cantidad de veces que aparece la letra en la frase.
+```java
+package ejercicios_de_algoritmia;
 
+import java.util.Scanner;
+
+public class Ejercicio_02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+// Solicita al usuario una frase y una letra y muestra la cantidad de veces que aparece la letra en la frase.
+		Scanner s = new Scanner(System.in);
+
+		System.out.println("Inserta una frase: ");
+		String frase = s.nextLine();
+
+		System.out.println("Inserta una letra: ");
+		char letra = s.nextLine().charAt(0);
+
+		/*
+		 * frase = Hola qué tal estás? letra = a
+		 */
+
+		int cont = 0;
+		for (int i = 0; i < frase.length(); i++) {
+			if (frase.charAt(i) == letra) {
+				cont++;
+			}
+		}
+
+		System.out.println("La letra aparece " + cont + " veces en la frase.");
+	}
+
+}
+
+```
 3. Suma o resta (según elija el usuario) dos números reales
 
-4. Almacena en dos variables datos de validación (usuario y contraseña) correctos y permite que el usuario valide (dispone de 3 intentos)
+```java   
+package ejercicios_de_algoritmia;
 
-5. Solicita al usuario una letra, si inserta una a muestra el número 7, si es una b, el 9, si es una c el 101 y si no es ninguno de los tres, indícale que se ha equivocado de letra
+import java.util.Scanner;
 
-6. Ordena alfabéticamente un array con 7 palabras, puedes usar el algoritmo de la burbuja
+public class Ejercicio_03 {
 
-7. Crea un programa que lea por teclado tres números enteros H, M, S correspondientes a hora, minutos y segundos respectivamente, y comprueba si la hora que indican es una hora válida.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Suma o resta (según elija el usuario) dos números reales
+		
+		double n1, n2;
+		char op;
+		Scanner s = new Scanner(System.in);
+
+		System.out.println("Inserte un numero: ");
+		n1 = s.nextDouble();
+		s.nextLine();
+		do {
+			System.out.println("Inserte el operador (+ o -): ");
+			op = s.nextLine().charAt(0);
+			if(op!='+' && op!='-') {
+				System.out.println("Debes insertar + o -");
+			}
+		}while(op!='+' && op!='-');
+		
+		
+		System.out.println("Inserte otro numero: ");
+		n2 = s.nextDouble();
+
+		if (op == '+') {
+			System.out.println("La suma es: " + (n1 + n2));
+		} else {
+			System.out.println("La resta es: " + (n1 - n2));
+		}
+		
+		
+		
+	}
+
+}
+```
+1. Almacena en dos variables datos de validación (usuario y contraseña) correctos y permite que el usuario valide (dispone de 3 intentos)
+
+```java
+package ejercicios_de_algoritmia;
+
+import java.util.Scanner;
+
+public class Ejercicio_04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner s = new Scanner(System.in);
+		final String USERC = "admin";
+		final String PASSC = "admin";
+		final int INTENTOS = 3;
+		
+		
+		String user, pass;
+		int i = 0;		
+		do {
+			System.out.println("Inserte el usuario: ");
+			user = s.nextLine();
+			System.out.println("Inserte la contraseña: ");
+			pass = s.nextLine();
+			
+			
+			if(!user.equals(USERC) || !pass.equals(PASSC)) {
+				System.out.println("Usuario y/o contraseña incorrecto");
+				i++;
+			}
+		}while((!user.equals(USERC) || !pass.equals(PASSC)) && i<INTENTOS);
+		
+		if(i==INTENTOS) {
+			System.out.println("Intentos agotados");
+		}else {
+			System.out.println("Bienvenido");
+		}
+	}
+
+}
+
+```
+
+2. Solicita al usuario una letra, si inserta una a muestra el número 7, si es una b, el 9, si es una c el 101 y si no es ninguno de los tres, indícale que se ha equivocado de letra
+
+3. Ordena alfabéticamente un array con 7 palabras, puedes usar el algoritmo de la burbuja
+
+4. Crea un programa que lea por teclado tres números enteros H, M, S correspondientes a hora, minutos y segundos respectivamente, y comprueba si la hora que indican es una hora válida.
 
 Supondremos que se leemos una hora en modo 24 Horas, es decir, el valor válido para las horas será mayor o igual que cero y menor que 24.
 
