@@ -1,10 +1,21 @@
 public class Main {
-    public static void main(String[] args) {
+    
+	public static void main(String[] args) {
         // Crear una cuenta con un titular
-        CuentaBancaria cuenta1 = new CuentaBancaria("Juan Perez", "12345678A", 1000.0);
+        CuentaBancaria cuenta = new CuentaBancaria("Rita Perez", "12345678A");
         
         // Crear una cuenta con dos titulares
-        CuentaBancaria cuenta2 = new CuentaBancaria("Ana Gomez", "Pedro Martinez", "87654321B", 500.0);
+        CuentaBancaria cuenta1 = new CuentaBancaria("Ana perz", "Alfonso Martinez", "87654321B");
+        
+        // Crear una cuenta con dos titulares con perras
+        CuentaBancaria cuenta2 = new CuentaBancaria("Doña Gomez", "Raul Martinez", "87654321B", 1000.00);
+        
+        // Crear una cuenta con dos titulares con perras
+        CuentaBancaria cuenta3 = new CuentaBancaria("Rita Marley", "Pedro Gomez", "87654321B", 1000.00);
+        
+        
+        CuentaBancaria cuenta4 = new CuentaBancaria()
+        
         
         // Mostrar los datos de las cuentas usando toString y los getters
         System.out.println(cuenta1.toString());
