@@ -1,21 +1,25 @@
 package persona_profesor;
 
-public class Persona {
+public abstract class Persona {
 	protected String nombre;
-	protected String dni;
 
-
-	protected Persona(String nombre, String dni) {
+	public Persona(String nombre) {
+		super();
 		this.nombre = nombre;
-		this.dni = dni;
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
 	@Override
 	public String toString() {
-		return "Persona [nombre=" + nombre + ", dni=" + dni + "]";
+		return "Persona [nombre=" + nombre + "]";
 	}
-
 
 
 }
